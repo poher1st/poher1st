@@ -1,21 +1,64 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>my Discord</title>
+  <style>
+    body {
+      background: radial-gradient(circle at top left, #ff99cc, #cc66ff, #660066); /* mystical gradient */
+      color: #f8e1f4; /* soft light text */
+      font-family: "Trebuchet MS", sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    h1 {
+      color: #ff66b2; /* bright pink accent */
+      text-shadow: 0 0 15px rgba(255, 102, 178, 0.8);
+    }
+    .box {
+      background: rgba(50, 0, 70, 0.7); /* semi-transparent violet block */
+      padding: 25px;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0 0 25px rgba(204, 102, 255, 0.7);
+    }
+    button {
+      margin-top: 20px;
+      padding: 12px 24px;
+      background: linear-gradient(90deg, #ff66b2, #cc33ff);
+      border: none;
+      border-radius: 8px;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.3s ease;
+    }
+    button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px rgba(255, 102, 178, 0.8);
+    }
+  </style>
   <script>
-    window.onload = async () => {
+    async function copyDiscord() {
       try {
-        await navigator.clipboard.writeText("poher1st"); // ← твой ник
-        alert("my Discord copied to your clipboard.");
+        await navigator.clipboard.writeText("@poher1st"); // your Discord username
+        alert("my discord has been copied to your clipboard.");
       } catch (err) {
-        alert("Failed to copy. Please copy manually: @poher1st");
+        alert("failed to copy. please copy manually: @poher1st");
       }
-    };
+    }
+    window.onload = copyDiscord;
   </script>
 </head>
 <body>
-  <h2>hi.</h2>
-  <p>your clipboard now contains my Discord username: <b>@poher1st</b></p>
+  <div class="box">
+    <h1>hi.</h1>
+    <p>my discord: <b>@poher1st</b></p>
+    <button onclick="copyDiscord()">copy again</button>
+  </div>
 </body>
 </html>
