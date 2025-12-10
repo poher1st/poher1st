@@ -5,31 +5,30 @@
   <title>my Discord</title>
   <style>
     body {
-      background: radial-gradient(circle at top left, #ff99cc, #cc66ff, #660066); /* mystical gradient */
-      color: #f8e1f4; /* soft light text */
+      background: linear-gradient(135deg, #ff99cc, #660066); /* hair + outfit colors */
+      color: #fce4ec; /* soft light text */
       font-family: "Trebuchet MS", sans-serif;
       display: flex;
-      flex-direction: column;
       justify-content: center;
       align-items: center;
       height: 100vh;
       margin: 0;
     }
-    h1 {
-      color: #ff66b2; /* bright pink accent */
-      text-shadow: 0 0 15px rgba(255, 102, 178, 0.8);
-    }
     .box {
-      background: rgba(50, 0, 70, 0.7); /* semi-transparent violet block */
+      background: rgba(0, 0, 0, 0.7); /* outfit base (black) */
       padding: 25px;
       border-radius: 15px;
       text-align: center;
-      box-shadow: 0 0 25px rgba(204, 102, 255, 0.7);
+      box-shadow: 0 0 25px rgba(255, 153, 204, 0.7); /* glow in hair color */
+    }
+    h1 {
+      color: #ff99cc; /* hair color accent */
+      text-shadow: 0 0 15px rgba(255, 153, 204, 0.8);
     }
     button {
       margin-top: 20px;
       padding: 12px 24px;
-      background: linear-gradient(90deg, #ff66b2, #cc33ff);
+      background: linear-gradient(90deg, #ff99cc, #9933cc); /* hair + outfit accent */
       border: none;
       border-radius: 8px;
       color: white;
@@ -39,13 +38,13 @@
     }
     button:hover {
       transform: scale(1.05);
-      box-shadow: 0 0 15px rgba(255, 102, 178, 0.8);
+      box-shadow: 0 0 15px rgba(255, 153, 204, 0.8);
     }
   </style>
   <script>
     async function copyDiscord() {
       try {
-        await navigator.clipboard.writeText("@poher1st"); // your Discord username
+        await navigator.clipboard.writeText("@poher1st");
         alert("my discord has been copied to your clipboard.");
       } catch (err) {
         alert("failed to copy. please copy manually: @poher1st");
