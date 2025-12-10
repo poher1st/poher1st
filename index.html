@@ -17,17 +17,24 @@
       position: fixed;
       bottom: 20px;
       left: 20px;
-      background: rgba(0, 0, 0, 0.6); /* полупрозрачный чёрный фон для читаемости */
+      background: rgba(0, 0, 0, 0.6); /* полупрозрачный фон для читаемости */
       padding: 20px;
       border-radius: 12px;
       text-align: center;
-      border: 2px solid #000000; /* рамка чёрная */
-      animation: slideUp 1s ease; /* плавное появление */
+      border: 2px solid #000000; /* начальный цвет рамки */
+      animation: slideUp 1s ease, borderPulse 2s infinite; /* плавное появление + мигание рамки */
     }
 
     @keyframes slideUp {
       from { transform: translateY(100px); opacity: 0; }
       to { transform: translateY(0); opacity: 1; }
+    }
+
+    /* мигающий эффект рамки */
+    @keyframes borderPulse {
+      0%   { border-color: #000000; }
+      50%  { border-color: #ff3333; }
+      100% { border-color: #000000; }
     }
 
     h1 {
