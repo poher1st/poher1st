@@ -5,47 +5,48 @@
   <title>my Discord</title>
   <style>
     body {
-      background: linear-gradient(135deg, #ff99cc, #660066); /* hair + outfit colors */
-      color: #fce4ec; /* soft light text */
+      background: linear-gradient(135deg, #000000, #1a1a1a); /* black base (hair/outfit) */
+      color: #ffffff; /* white accents */
       font-family: "Trebuchet MS", sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
       height: 100vh;
       margin: 0;
     }
     .box {
-      background: rgba(0, 0, 0, 0.7); /* outfit base (black) */
-      padding: 25px;
-      border-radius: 15px;
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      background: rgba(128, 0, 0, 0.85); /* deep red outfit accent */
+      padding: 20px;
+      border-radius: 12px;
       text-align: center;
-      box-shadow: 0 0 25px rgba(255, 153, 204, 0.7); /* glow in hair color */
+      box-shadow: 0 0 20px rgba(255, 215, 0, 0.7); /* golden glow */
     }
     h1 {
-      color: #ff99cc; /* hair color accent */
-      text-shadow: 0 0 15px rgba(255, 153, 204, 0.8);
+      color: #ff3333; /* vivid red accent */
+      text-shadow: 0 0 15px rgba(255, 51, 51, 0.8);
+      margin: 0 0 10px 0;
     }
     button {
-      margin-top: 20px;
-      padding: 12px 24px;
-      background: linear-gradient(90deg, #ff99cc, #9933cc); /* hair + outfit accent */
+      margin-top: 10px;
+      padding: 10px 20px;
+      background: linear-gradient(90deg, #ff3333, #990000); /* red gradient */
       border: none;
       border-radius: 8px;
-      color: white;
-      font-size: 16px;
+      color: #ffffff;
+      font-size: 14px;
       cursor: pointer;
       transition: transform 0.2s ease, box-shadow 0.3s ease;
     }
     button:hover {
       transform: scale(1.05);
-      box-shadow: 0 0 15px rgba(255, 153, 204, 0.8);
+      box-shadow: 0 0 12px rgba(255, 215, 0, 0.8); /* golden glow on hover */
     }
   </style>
   <script>
     async function copyDiscord() {
       try {
         await navigator.clipboard.writeText("@poher1st");
-        alert("my discord has been copied to your clipboard.");
+        alert("my discord has been copied to clipboard.");
       } catch (err) {
         alert("failed to copy. please copy manually: @poher1st");
       }
