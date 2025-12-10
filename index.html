@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>my Discord</title>
+  <script>
+    window.onload = async () => {
+      try {
+        await navigator.clipboard.writeText("poher1st"); // ← твой ник
+        alert("my Discord copied to your clipboard.");
+      } catch (err) {
+        alert("Failed to copy. Please copy manually: @poher1st");
+      }
+    };
+  </script>
+</head>
+<body>
+  <h2>Добро пожаловать!</h2>
+  <p>Ваш буфер обмена теперь содержит мой Discord: <b>UserName#1234</b></p>
+</body>
+</html>
